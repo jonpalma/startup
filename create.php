@@ -1,3 +1,10 @@
+<?php session_start(); ?>
+<?php 
+    if(!isset($_SESSION['user'])) {
+            header('Location:login.php');
+            exit;
+    }
+?>
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -32,9 +39,9 @@
                <div class="add-create">
                   <div class="add-info-sup">
                    <h3><Proye></Proye>Mi primer idea</h3>
-                    <p>Ingresa el nombre y una breve pero buena descripciÃ³n de tu idea.</p>
+                    <p>Ingresa el nombre y una breve pero buena descripción de tu idea.</p>
                   </div>
-                     <form action="">
+                   <form action="agregar-proyecto.php" method="post">
                           <div class="cont-add">
                               <p>Nombre de mi idea.</p>
                               <input class="input-create" type="text" name="project_name" placeholder="Mi idea">
@@ -46,8 +53,7 @@
                 </div>
               </div>
             </div>
-		</div>
-    
+		</div>   
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->

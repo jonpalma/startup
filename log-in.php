@@ -12,9 +12,9 @@
                         if(! $row ) {
                            $loginInvalido = 1;
                          } else {
+                             $_SESSION['user'] = $row['id_usuario'];
                              //cerrar conexión a BD
                              mysql_close();
-                             $_SESSION['user'] = 1;
                              header('Location:proyectos.php');
                              exit;
                          }
