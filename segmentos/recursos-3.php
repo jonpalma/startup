@@ -1,7 +1,26 @@
+<?php session_start(); ?>
+<?php 
+    if(!isset($_SESSION['user'])) {
+            header('Location:login.php');
+            exit;
+    } else {
+        $id_recursos = $_SESSION['id_recursos'];
+    }
+?>
+<?php 
+    include_once('../bd/inicializar.php');
+?>
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <?php include("../modules/segmentos-head.php"); ?>
+    <?php 
+        include("../modules/segmentos-head.php");
+        $sql = "SELECT pregunta3 FROM recursos WHERE id_recursos=" . $id_recursos;
+        $result = mysql_query($sql);
+        $row = mysql_fetch_array($result, MYSQL_ASSOC);
+        $respuesta = $row['pregunta3'];
+        mysql_close();
+    ?>
   </head>
   <body>
       <?php include("../modules/menu-sup.php"); ?>
@@ -16,10 +35,10 @@
                 </div>
             </div>
             <div class="col-md-6">
-               <form action="">
+                <form action="set_resources3.php" method="post">
                     <div class="cont-center">
-                        <h3>3.  ¿Cuáles son los puestos claves mínimo para la operación del negocio?  </h3>
-                        <textarea type="text" class="input-answer" ></textarea>
+                        <h3>¿Cuáles son los puestos claves mínimo para la operación del negocio?  </h3>
+                        <textarea type="text" name="respuesta" class="input-answer" ><?php echo $respuesta; ?></textarea>
                         <p>Ejemplo: La persona encargada de elaborar la mermelada y el encargado de distribuir el producto.  </p>
                          <input type="submit" class="btn btn-green" value="Siguiente">
                     </div>

@@ -1,7 +1,26 @@
+<?php session_start(); ?>
+<?php 
+    if(!isset($_SESSION['user'])) {
+            header('Location:login.php');
+            exit;
+    } else {
+        $id_actividades = $_SESSION['id_actividades'];
+    }
+?>
+<?php 
+    include_once('../bd/inicializar.php');
+?>
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <?php include("../modules/segmentos-head.php"); ?>
+    <?php 
+        include("../modules/segmentos-head.php");
+        $sql = "SELECT pregunta1 FROM actividades WHERE id_actividades=" . $id_actividades;
+        $result = mysql_query($sql);
+        $row = mysql_fetch_array($result, MYSQL_ASSOC);
+        $respuesta = $row['pregunta1'];
+        mysql_close();
+    ?>
   </head>
   <body>
       <?php include("../modules/menu-sup.php"); ?>
@@ -16,10 +35,10 @@
                 </div>
             </div>
             <div class="col-md-6">
-               <form action="">
+                <form action="set_activities1.php" method="post">
                     <div class="cont-center">
-                        <h3>1.  ¿Cuáles son los procesos más importantes para hacer tu producto o dar tu servicio?  </h3>
-                        <textarea type="text" class="input-answer" ></textarea>
+                        <h3>¿Cuáles son los procesos más importantes para hacer tu producto o dar tu servicio?  </h3>
+                        <textarea type="text" name="respuesta" class="input-answer" ><?php echo $respuesta; ?></textarea>
                         <p>Ejemplo: Validación que la fruta sea orgánica, la preparación de la mermelada cubre con las normas de salubridad  necesarias y  la producción cumple los estándares de bajo en azúcar.  </p>
                          <input type="submit" class="btn btn-green" value="Siguiente">
                     </div>

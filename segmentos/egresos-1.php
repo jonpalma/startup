@@ -1,7 +1,26 @@
+<?php session_start(); ?>
+<?php 
+    if(!isset($_SESSION['user'])) {
+            header('Location:login.php');
+            exit;
+    } else {
+        $id_costos = $_SESSION['id_costos'];
+    }
+?>
+<?php 
+    include_once('../bd/inicializar.php');
+?>
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <?php include("../modules/segmentos-head.php"); ?>
+    <?php 
+        include("../modules/segmentos-head.php");
+        $sql = "SELECT pregunta1 FROM costos WHERE id_costos=" . $id_costos;
+        $result = mysql_query($sql);
+        $row = mysql_fetch_array($result, MYSQL_ASSOC);
+        $respuesta = $row['pregunta1'];
+        mysql_close();
+    ?>
   </head>
   <body>
       <?php include("../modules/menu-sup.php"); ?>
@@ -18,10 +37,10 @@ Costos variables.- Son los que dependen de la producción (comisiones de venta, 
                 </div>
             </div>
             <div class="col-md-6">
-               <form action="">
+                <form action="set_costs1.php" method="post">
                     <div class="cont-center">
                         <h3>¿A cuánto estiman tus costos fijos mensuales? (recuerda incluir todos los servicios de agua, luz, teléfono, etc. Es importante conocerlos a detalle ya que más adelante tendrás que describirlos) </h3>
-                        <textarea type="text" class="input-answer" ></textarea>
+                        <textarea type="text" name="respuesta" class="input-answer" ><?php echo $respuesta; ?></textarea>
                         <p>Ejemplo: Costos fijos: Agua $ 500.00, Luz $2,000.00, teléfono e internet $600.00, renta $6,000.00 sueldo de dos empleados $12,000. </p>
                          <input type="submit" class="btn btn-green" value="Siguiente">
                     </div>

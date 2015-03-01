@@ -1,7 +1,26 @@
+<?php session_start(); ?>
+<?php 
+    if(!isset($_SESSION['user'])) {
+            header('Location:login.php');
+            exit;
+    } else {
+        $id_alianzas = $_SESSION['id_alianzas'];
+    }
+?>
+<?php 
+    include_once('../bd/inicializar.php');
+?>
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <?php include("../modules/segmentos-head.php"); ?>
+    <?php 
+        include("../modules/segmentos-head.php");
+        $sql = "SELECT pregunta3 FROM alianzas WHERE id_alianzas=" . $id_alianzas;
+        $result = mysql_query($sql);
+        $row = mysql_fetch_array($result, MYSQL_ASSOC);
+        $respuesta = $row['pregunta3'];
+        mysql_close();
+    ?>
   </head>
   <body>
       <?php include("../modules/menu-sup.php"); ?>
@@ -15,10 +34,10 @@
                 </div>
             </div>
             <div class="col-md-6">
-               <form action="">
+                <form action="set_aliance3.php" method="post">
                     <div class="cont-center">
-                        <h3>3.  ¿Qué actividades clave desarrollan nuestros socios?  </h3>
-                        <textarea type="text" class="input-answer" ></textarea>
+                        <h3>¿Qué actividades clave desarrollan nuestros socios?  </h3>
+                        <textarea type="text" name="respuesta" class="input-answer" ><?php echo $respuesta; ?></textarea>
                         <p>Ejemplo: Los distribuidores son los encargados de hacer llegar el producto a las tiendas y los promotores son las personas que promocionan el producto con los posibles clientes.  </p>
                          <input type="submit" class="btn btn-green" value="Siguiente">
                     </div>

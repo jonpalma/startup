@@ -1,7 +1,26 @@
+<?php session_start(); ?>
+<?php 
+    if(!isset($_SESSION['user'])) {
+            header('Location:login.php');
+            exit;
+    } else {
+        $id_relacion = $_SESSION['id_relacion'];
+    }
+?>
+<?php 
+    include_once('../bd/inicializar.php');
+?>
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <?php include("../modules/segmentos-head.php"); ?>
+    <?php 
+        include("../modules/segmentos-head.php");
+        $sql = "SELECT pregunta2 FROM relacion WHERE id_relacion=" . $id_relacion;
+        $result = mysql_query($sql);
+        $row = mysql_fetch_array($result, MYSQL_ASSOC);
+        $respuesta = $row['pregunta2'];
+        mysql_close();
+    ?>
   </head>
   <body>
       <?php include("../modules/menu-sup.php"); ?>
@@ -22,10 +41,10 @@ d) Co-creación.- Involucra la interacción del cliente con la propuesta de valo
                 </div>
             </div>
             <div class="col-md-6">
-               <form action="">
+                <form action="set_rel2.php" method="post">
                     <div class="cont-center">
                         <h3>¿Qué estrategías se utilizarán para mantener a los clientes?</h3>
-                        <textarea type="text" class="input-answer" ></textarea>
+                        <textarea type="text" name="respuesta" class="input-answer" ><?php echo $respuesta; ?></textarea>
                         <p>Ejemplo: Llamar periódicamente a nuestros distribuidores para obtener información sobre el que tanto se está desplazando el producto en el mercado.  </p>
                          <input type="submit" class="btn btn-green" value="Siguiente">
                     </div>

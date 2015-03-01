@@ -1,7 +1,26 @@
+<?php session_start(); ?>
+<?php 
+    if(!isset($_SESSION['user'])) {
+            header('Location:login.php');
+            exit;
+    } else {
+        $id_flujo = $_SESSION['id_flujo'];
+    }
+?>
+<?php 
+    include_once('../bd/inicializar.php');
+?>
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <?php include("../modules/segmentos-head.php"); ?>
+    <?php 
+        include("../modules/segmentos-head.php");
+        $sql = "SELECT pregunta1 FROM flujo WHERE id_flujo=" . $id_flujo;
+        $result = mysql_query($sql);
+        $row = mysql_fetch_array($result, MYSQL_ASSOC);
+        $respuesta = $row['pregunta1'];
+        mysql_close();
+    ?>
   </head>
   <body>
       <?php include("../modules/menu-sup.php"); ?>
@@ -15,10 +34,10 @@
                 </div>
             </div>
             <div class="col-md-6">
-               <form action="">
+                <form action="set_revenue1.php" method="post">
                     <div class="cont-center">
                         <h3>¿Cuáles son tus tipos de ingresos?</h3>
-                        <textarea type="text" class="input-answer" ></textarea>
+                        <textarea type="text" name="respuesta" class="input-answer" ><?php echo $respuesta; ?></textarea>
                         <p>Ejemplo: Pago con tarjeta o de contado al igual que venta por mayoreo con sistema de crédito para distribuidores.   </p>
                          <input type="submit" class="btn btn-green" value="Siguiente">
                     </div>

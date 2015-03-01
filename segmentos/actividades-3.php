@@ -1,7 +1,26 @@
+<?php session_start(); ?>
+<?php 
+    if(!isset($_SESSION['user'])) {
+            header('Location:login.php');
+            exit;
+    } else {
+        $id_actividades = $_SESSION['id_actividades'];
+    }
+?>
+<?php 
+    include_once('../bd/inicializar.php');
+?>
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <?php include("../modules/segmentos-head.php"); ?>
+    <?php 
+        include("../modules/segmentos-head.php");
+        $sql = "SELECT pregunta3 FROM actividades WHERE id_actividades=" . $id_actividades;
+        $result = mysql_query($sql);
+        $row = mysql_fetch_array($result, MYSQL_ASSOC);
+        $respuesta = $row['pregunta3'];
+        mysql_close();
+    ?>
   </head>
   <body>
       <?php include("../modules/menu-sup.php"); ?>
@@ -16,10 +35,10 @@
                 </div>
             </div>
             <div class="col-md-6">
-               <form action="">
+                <form action="set_activities3.php" method="post">
                     <div class="cont-center">
                         <h3>¿Qué actividades son importantes para promover tu producto/servicio con tu cliente? </h3>
-                        <textarea type="text" class="input-answer" ></textarea>
+                        <textarea type="text" name="respuesta" class="input-answer" ><?php echo $respuesta; ?></textarea>
                         <p>Ejemplo: Teléfono, medios de comunicación, degustaciones y demostraciones en áreas públicas. </p>
                          <input type="submit" class="btn btn-green" value="Siguiente">
                     </div>
