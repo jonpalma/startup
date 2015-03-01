@@ -28,7 +28,7 @@
         <div class="row">
             <div class="col-md-3">
                 <div class="cont-left">
-                    <img src="../images/canvas-1.png" alt="">
+                    <img src="../images/canvas-6.png" alt="">
                     <h3>Ingresos</h3>
                     <p>Los ingresos son las diferentes formas en que vas a generar ganancias para el negocio, ya sea por producto, cliente, servicio, a comisión, crédito, etc.  </p>
                 </div>

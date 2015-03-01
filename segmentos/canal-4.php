@@ -28,7 +28,7 @@
         <div class="row">
             <div class="col-md-3">
                 <div class="cont-left">
-                    <img src="../images/canvas-1.png" alt="">
+                    <img src="../images/canvas-3.png" alt="">
                     <h3>Canales de distribución</h3>
                     <p>Modo en que la empresa se comunica con los diferentes segmentos de mercado para llegar  a sus clientes y les proporciona una solución, los canles tienen tres funciones principales: comunicación, distribución y soporte postventa. </p>
                 </div>

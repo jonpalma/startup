@@ -28,7 +28,7 @@
         <div class="row">
             <div class="col-md-3">
                 <div class="cont-left">
-                    <img src="../images/canvas-1.png" alt="">
+                    <img src="../images/canvas-9.png" alt="">
                     <h3>Egresos</h3>
                     <p>Los egresos son los costos de la operación de tu negocio, estos se dividen en costos fijos y variables.
 Costos fijos.- Son aquellos que no dependen de la producción (Servicios básicos agua, luz, teléfono, renta, etc.)

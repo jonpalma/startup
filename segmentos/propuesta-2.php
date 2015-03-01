@@ -28,7 +28,7 @@
         <div class="row">
             <div class="col-md-3">
                 <div class="cont-left">
-                    <img src="../images/canvas-1.png" alt="">
+                    <img src="../images/canvas-2.png" alt="">
                     <h3>Propuesta de valor</h3>
                     <p>Tu propuesta de valor debe de explicar claramente cuáles son los beneficios de tu producto o servicio y por qué debe de escogerte a ti y no a la competencia. </p>
                 </div>

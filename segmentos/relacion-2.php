@@ -28,7 +28,7 @@
         <div class="row">
             <div class="col-md-3">
                 <div class="cont-left">
-                    <img src="../images/canvas-1.png" alt="">
+                    <img src="../images/canvas-5.png" alt="">
                     <h3>Relaciones con el cliente</h3>
                     <p>como se define el tipo de relación que se quiere establecer con los clientes. 
 <br><br>

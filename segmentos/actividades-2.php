@@ -28,7 +28,7 @@
         <div class="row">
             <div class="col-md-3">
                 <div class="cont-left">
-                    <img src="../images/canvas-1.png" alt="">
+                    <img src="../images/canvas-4.png" alt="">
                     <h3>Actividades Clave</h3>
                     <p>Cualquier modelo de negocio se basa en ciertas actividades que son clave para su funcionamiento. Las principales actividades clave residen en los procesos de producción, mantener relaciones y el llevar tu producto hasta tu cliente. Recuerda que para determinar que una actividad es clave, esta tiene que ser tan necesaria a su modo de que sin ella, tu modelo de negocios no funcionaría. 
  </p>

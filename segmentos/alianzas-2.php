@@ -28,7 +28,7 @@
         <div class="row">
             <div class="col-md-3">
                 <div class="cont-left">
-                    <img src="../images/canvas-1.png" alt="">
+                    <img src="../images/canvas-8.png" alt="">
                     <h3>Alianzas Clave</h3>
                     <p>Describe la red de proveedores y socios que contribuye al funcionamiento de nuestro negocio. </p>
                 </div>

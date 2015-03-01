@@ -28,7 +28,7 @@
         <div class="row">
             <div class="col-md-3">
                 <div class="cont-left">
-                    <img src="../images/canvas-1.png" alt="">
+                    <img src="../images/canvas-7.png" alt="">
                     <h3>Recursos Clave</h3>
                     <p>Describe los activos más importantes para que el negocio funcione: Físicos, económicos, intelectuales y humanos. 
  </p>
