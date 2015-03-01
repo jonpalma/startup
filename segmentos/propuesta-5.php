@@ -1,7 +1,26 @@
+<?php session_start(); ?>
+<?php 
+    if(!isset($_SESSION['user'])) {
+            header('Location:login.php');
+            exit;
+    } else {
+        $id_propuesta_valor = $_SESSION['id_propuesta_valor'];
+    }
+?>
+<?php 
+    include_once('../bd/inicializar.php');
+?>
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <?php include("../modules/segmentos-head.php"); ?>
+    <?php 
+        include("../modules/segmentos-head.php");
+        $sql = "SELECT pregunta5 FROM propuesta_valor WHERE id_propuesta_valor=" . $id_propuesta_valor;
+        $result = mysql_query($sql);
+        $row = mysql_fetch_array($result, MYSQL_ASSOC);
+        $respuesta = $row['pregunta5'];
+        mysql_close();
+    ?>
   </head>
   <body>
       <?php include("../modules/menu-sup.php"); ?>
@@ -15,10 +34,10 @@
                 </div>
             </div>
             <div class="col-md-6">
-               <form action="">
+                <form action="set_prop5.php" method="post">
                     <div class="cont-center">
                         <h3>¿Cuáles son tus ejemplos para asignar valor a tu oferta? </h3>
-                        <textarea type="text" class="input-answer" ></textarea>
+                        <textarea type="text" name="respuesta" class="input-answer" ><?php echo $respuesta; ?></textarea>
                         <p>Ejemplo: Orgánico, artesanal, precio, saludable.</p>
                          <input type="submit" class="btn btn-green" value="Siguiente">
                     </div>
