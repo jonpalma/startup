@@ -45,8 +45,8 @@
                           <div class="cont-add">
                               <p>Nombre de mi idea.</p>
                               <input class="input-create" type="text" name="project_name" placeholder="Mi idea">
-                              <p>Nombre de mi idea.</p>
-                              <input class="input-create-txt" type="text" name="project_description" placeholder="Mi idea">
+                              <p>Breve descripción de tu idea.</p>
+                              <input class="input-create-txt" type="text" name="project_description" placeholder="Descripción de mi idea">
                               <input type="submit" class="btn btn-listo" value="LISTO">
                           </div>
                       </form>               
