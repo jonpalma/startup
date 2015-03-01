@@ -42,7 +42,7 @@ CREATE TABLE `actividades` (
 
 LOCK TABLES `actividades` WRITE;
 /*!40000 ALTER TABLE `actividades` DISABLE KEYS */;
-INSERT INTO `actividades` VALUES (1,1,'','','');
+INSERT INTO `actividades` VALUES (1,1,'ValidaciÃ³n que la fruta sea orgÃ¡nica, la preparaciÃ³n de la mermelada cubre con las normas de salubridad necesarias y la producciÃ³n cumple los estÃ¡ndares de bajo en azÃºcar. ','Llamar periÃ³dicamente a nuestros distribuidores para obtener informaciÃ³n sobre el que tanto se estÃ¡ desplazando el producto en el mercado. ','TelÃ©fono, medios de comunicaciÃ³n, degustaciones y demostraciones en Ã¡reas pÃºblicas.');
 /*!40000 ALTER TABLE `actividades` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -71,7 +71,7 @@ CREATE TABLE `alianzas` (
 
 LOCK TABLES `alianzas` WRITE;
 /*!40000 ALTER TABLE `alianzas` DISABLE KEYS */;
-INSERT INTO `alianzas` VALUES (1,1,'','','');
+INSERT INTO `alianzas` VALUES (1,1,'Los distribuidores, promotores y salubridad asÃ­ como organismo certificador de productos orgÃ¡nicos. ','Productores de fruta orgÃ¡nica, proveedores de envases de vidrio y de sustituto de azÃºcar.','Los distribuidores son los encargados de hacer llegar el producto a las tiendas y los promotores son las personas que promocionan el producto con los posibles clientes. ');
 /*!40000 ALTER TABLE `alianzas` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -162,7 +162,7 @@ CREATE TABLE `costos` (
 
 LOCK TABLES `costos` WRITE;
 /*!40000 ALTER TABLE `costos` DISABLE KEYS */;
-INSERT INTO `costos` VALUES (1,1,'','');
+INSERT INTO `costos` VALUES (1,1,'Costos fijos: Agua $ 500.00, Luz $2,000.00, telÃ©fono e internet $600.00, renta $6,000.00 sueldo de dos empleados $12,000. ','Para elaborar 100 frascos de mermelada se necesita: Fruta orgÃ¡nica: 25kg x $50pesos el kilo = $1,250.00, sustituto de azÃºcar: 10kg x $ 9pesos el kilo =$90.00, envase de vidrio artesanal $10.00 x 1000 productos = 10,000.');
 /*!40000 ALTER TABLE `costos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -189,7 +189,7 @@ CREATE TABLE `flujo` (
 
 LOCK TABLES `flujo` WRITE;
 /*!40000 ALTER TABLE `flujo` DISABLE KEYS */;
-INSERT INTO `flujo` VALUES (1,1,'');
+INSERT INTO `flujo` VALUES (1,1,'Pago con tarjeta o de contado al igual que venta por mayoreo con sistema de crÃ©dito para distribuidores. ');
 /*!40000 ALTER TABLE `flujo` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -220,7 +220,7 @@ CREATE TABLE `propuesta_valor` (
 
 LOCK TABLES `propuesta_valor` WRITE;
 /*!40000 ALTER TABLE `propuesta_valor` DISABLE KEYS */;
-INSERT INTO `propuesta_valor` VALUES (1,1,'','','','','');
+INSERT INTO `propuesta_valor` VALUES (1,1,'Gente diabÃ©tica que no puede comer azÃºcar pero quiere consumir mermelada','Disfrutar una propuesta sana alimenticia que no perjudique la salud','Mermelada en envase de 500grs con decoraciÃ³n artesanal. ','Es orgÃ¡nica, gourmet y entrega a domicilio en cualquier parte del paÃ­s.','OrgÃ¡nico, artesanal, precio, saludable.');
 /*!40000 ALTER TABLE `propuesta_valor` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -277,7 +277,7 @@ CREATE TABLE `recursos` (
 
 LOCK TABLES `recursos` WRITE;
 /*!40000 ALTER TABLE `recursos` DISABLE KEYS */;
-INSERT INTO `recursos` VALUES (1,1,'','','');
+INSERT INTO `recursos` VALUES (1,1,'Una despulpadora, cortadora de frutas y una autoclave para sellado. ','Registro de la marca ante IMPI para su comercializaciÃ³n. ','La persona encargada de elaborar la mermelada y el encargado de distribuir el producto. ');
 /*!40000 ALTER TABLE `recursos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -305,7 +305,7 @@ CREATE TABLE `relacion` (
 
 LOCK TABLES `relacion` WRITE;
 /*!40000 ALTER TABLE `relacion` DISABLE KEYS */;
-INSERT INTO `relacion` VALUES (1,1,'','');
+INSERT INTO `relacion` VALUES (1,1,'Autoservicio y con un numero 01-800 para recepciÃ³n de sugerencias y quejas. ','Llamar periÃ³dicamente a nuestros distribuidores para obtener informaciÃ³n sobre el que tanto se estÃ¡ desplazando el producto en el mercado. ');
 /*!40000 ALTER TABLE `relacion` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -343,4 +343,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-03-01  1:22:11
+-- Dump completed on 2015-03-01 11:29:15
