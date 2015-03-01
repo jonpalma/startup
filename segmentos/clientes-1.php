@@ -11,7 +11,8 @@
                 <div class="cont-left">
                     <img src="../images/canvas-1.png" alt="">
                     <h3>Clientes</h3>
-                    <h5>Describe la red de proveedores y socios que contribuye al funcionamiento de nuestro negocio.</h5>
+                    <p>Los clientes son la base de tu modelo de negocios, son los grupos de personas o entidades a los que tu propuesta soluciona su necesidad o problema. <br><br>
+                    En esta parte se definirá el perfil de tu cliente.</p>
                 </div>
             </div>
             <div class="col-md-6">

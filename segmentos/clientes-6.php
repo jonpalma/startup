@@ -18,9 +18,9 @@
             <div class="col-md-6">
                <form action="">
                     <div class="cont-center">
-                        <h3>¿Son hombres o mujeres?</h3>
+                        <h3>¿Qué otras características tienen? </h3>
                         <textarea type="text" class="input-answer" ></textarea>
-                        <p>Ejemplo: Ejemplo: Sexo indistinto. </p>
+                        <p>Ejemplo: Personas que les gusta pagar en efectivo, amas de casa, jubilados, personas con ingresos mayores a $25,000 pesos mensuales y personas con problemas digestivos.   </p>
                          <input type="submit" class="btn btn-green" value="Siguiente">
                     </div>
                 </form>

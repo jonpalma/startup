@@ -18,9 +18,9 @@
             <div class="col-md-6">
                <form action="">
                     <div class="cont-center">
-                        <h3>¿Son hombres o mujeres?</h3>
+                        <h3>¿Qué estilo de vida tienen?</h3>
                         <textarea type="text" class="input-answer" ></textarea>
-                        <p>Ejemplo: Ejemplo: Sexo indistinto. </p>
+                        <p>Ejemplo: Personas que se preocupan por su alimentación. </p>
                          <input type="submit" class="btn btn-green" value="Siguiente">
                     </div>
                 </form>

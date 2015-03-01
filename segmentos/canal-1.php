@@ -10,23 +10,23 @@
             <div class="col-md-3">
                 <div class="cont-left">
                     <img src="../images/canvas-1.png" alt="">
-                    <h3>Clientes</h3>
-                    <p>Los clientes son la base de tu modelo de negocios, son los grupos de personas o entidades a los que tu propuesta soluciona su necesidad o problema. <br><br>
-                    En esta parte se definirá el perfil de tu cliente.</p>
+                    <h3>Canales de distribución</h3>
+                    <p>Modo en que la empresa se comunica con los diferentes segmentos de mercado para llegar  a sus clientes y les proporciona una solución, los canles tienen tres funciones principales: comunicación, distribución y soporte postventa. </p>
                 </div>
             </div>
             <div class="col-md-6">
                <form action="">
                     <div class="cont-center">
-                        <h3>¿Son hombres o mujeres?</h3>
+                        <h3>¿Cuáles son los canales de comunicación con los clientes?</h3>
                         <textarea type="text" class="input-answer" ></textarea>
-                        <p>Ejemplo: Ejemplo: Sexo indistinto. </p>
+                        <p>Ejemplo: Teléfono, medios de comunicación, degustaciones y demostraciones en áreas públicas. </p>
                          <input type="submit" class="btn btn-green" value="Siguiente">
                     </div>
                 </form>
             </div>
                 <div class="col-md-2">
                   <p><span class="circle-1"></span></p>
+                  <p><span class="circle-2"></span></p>
                   <p><span class="circle-2"></span></p>
                   <p><span class="circle-2"></span></p>
                   <p><span class="circle-2"></span></p>

@@ -18,9 +18,9 @@
             <div class="col-md-6">
                <form action="">
                     <div class="cont-center">
-                        <h3>¿Son hombres o mujeres?</h3>
+                        <h3>¿Qué edades tienen?</h3>
                         <textarea type="text" class="input-answer" ></textarea>
-                        <p>Ejemplo: Ejemplo: Sexo indistinto. </p>
+                        <p>Ejemplo: Personas entre 40 y 60 años.  </p>
                          <input type="submit" class="btn btn-green" value="Siguiente">
                     </div>
                 </form>

@@ -18,9 +18,9 @@
             <div class="col-md-6">
                <form action="">
                     <div class="cont-center">
-                        <h3>¿Son hombres o mujeres?</h3>
+                        <h3>¿Cuáles son las preferencias y hábitos de interacción de tu cliente?</h3>
                         <textarea type="text" class="input-answer" ></textarea>
-                        <p>Ejemplo: Ejemplo: Sexo indistinto. </p>
+                        <p>Ejemplo: Servicio a domicilio, en supermercados y tiendas naturistas.  </p>
                          <input type="submit" class="btn btn-green" value="Siguiente">
                     </div>
                 </form>
