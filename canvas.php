@@ -5,6 +5,7 @@
             exit;
     } else {
         $id_proyecto = $_SESSION['id_proyecto'];
+        $contador = 0;
     }
 ?>
 <?php 
@@ -53,12 +54,20 @@
                     $sql = "SELECT * FROM clientes WHERE id_proyecto = " . $id_proyecto;
                     $retval = mysql_query($sql);
                     $result = mysql_fetch_array($retval, MYSQL_ASSOC);
+                    $contador = 0;
+                    for($i = 1; $i < 7; $i++) {
+                        if($result['pregunta' . $i] != ''){
+                        $contador++;
+                        }
+                    }
+                    
                ?>
                <a href="get_clients_id.php?id_clientes=<?php echo $result['id_clientes']; ?>">
                     <div class="cont-add-canvas">
                     <img src="images/canvas-1.png" alt="">
                     <h3>Clientes</h3>
                     <p>Aprende a crear el mercado al que va diriguido tu idea.</p>
+                    <p><?php echo $contador; ?> / 6</p>
                   </div> 
                 </a> 
            </div>
@@ -67,12 +76,19 @@
                     $sql = "SELECT * FROM propuesta_valor WHERE id_proyecto = " . $id_proyecto;
                     $retval = mysql_query($sql);
                     $result = mysql_fetch_array($retval, MYSQL_ASSOC);
+                    $contador = 0;
+                    for($i = 1; $i < 6; $i++) {
+                        if($result['pregunta' . $i] != ''){
+                        $contador++;
+                        }
+                    }
                ?>
                <a href="get_prop_id.php?id_propuesta_valor=<?php echo $result['id_propuesta_valor']; ?>">
                     <div class="cont-add-canvas">
                     <img src="images/canvas-2.png" alt="">
                     <h3>Propuesta de Valor</h3>
                     <p>Aprende a crear el mercado al que va diriguido tu idea.</p>
+                    <p><?php echo $contador; ?> / 5</p>
                   </div> 
                 </a> 
            </div>
@@ -81,12 +97,19 @@
                     $sql = "SELECT * FROM canales_dist WHERE id_proyecto = " . $id_proyecto;
                     $retval = mysql_query($sql);
                     $result = mysql_fetch_array($retval, MYSQL_ASSOC);
+                    $contador = 0;
+                    for($i = 1; $i < 6; $i++) {
+                        if($result['pregunta' . $i] != ''){
+                        $contador++;
+                        }
+                    }
                ?>
                <a href="get_dist_id.php?id_canales_dist=<?php echo $result['id_canales_dist']; ?>">
                     <div class="cont-add-canvas">
                     <img src="images/canvas-3.png" alt="">
                     <h3>Canales de distribución</h3>
                     <p>Aprende a crear el mercado al que va diriguido tu idea.</p>
+                    <p><?php echo $contador; ?> / 5</p>
                   </div> 
                 </a> 
            </div>
@@ -97,12 +120,19 @@
                     $sql = "SELECT * FROM actividades WHERE id_proyecto = " . $id_proyecto;
                     $retval = mysql_query($sql);
                     $result = mysql_fetch_array($retval, MYSQL_ASSOC);
+                    $contador = 0;
+                    for($i = 1; $i < 4; $i++) {
+                        if($result['pregunta' . $i] != ''){
+                        $contador++;
+                        }
+                    }
                ?>
                <a href="get_activities_id.php?id_actividades=<?php echo $result['id_actividades']; ?>">
                     <div class="cont-add-canvas">
                     <img src="images/canvas-4.png" alt="">
                     <h3>Actividades Clave</h3>
                     <p>Aprende a crear el mercado al que va diriguido tu idea.</p>
+                    <p><?php echo $contador; ?> / 3</p>
                   </div> 
                 </a> 
            </div>
@@ -111,12 +141,19 @@
                     $sql = "SELECT * FROM relacion WHERE id_proyecto = " . $id_proyecto;
                     $retval = mysql_query($sql);
                     $result = mysql_fetch_array($retval, MYSQL_ASSOC);
+                    $contador = 0;
+                    for($i = 1; $i < 3; $i++) {
+                        if($result['pregunta' . $i] != ''){
+                        $contador++;
+                        }
+                    }
                ?>
                <a href="get_rel_id.php?id_relacion=<?php echo $result['id_relacion']; ?>">
                     <div class="cont-add-canvas">
                     <img src="images/canvas-5.png" alt="">
                     <h3>Relación</h3>
                     <p>Aprende a crear el mercado al que va diriguido tu idea.</p>
+                    <p><?php echo $contador; ?> / 2</p>
                   </div> 
                 </a> 
            </div>
@@ -125,12 +162,19 @@
                     $sql = "SELECT * FROM flujo WHERE id_proyecto = " . $id_proyecto;
                     $retval = mysql_query($sql);
                     $result = mysql_fetch_array($retval, MYSQL_ASSOC);
+                    $contador = 0;
+                    for($i = 1; $i < 2; $i++) {
+                        if($result['pregunta' . $i] != ''){
+                        $contador++;
+                        }
+                    }
                ?>
                <a href="get_revenue_id.php?id_flujo=<?php echo $result['id_flujo']; ?>">
                     <div class="cont-add-canvas">
                     <img src="images/canvas-6.png" alt="">
                     <h3>Flujo de efectivo</h3>
                     <p>Aprende a crear el mercado al que va diriguido tu idea.</p>
+                    <p><?php echo $contador; ?> / 1</p>
                   </div> 
                 </a> 
            </div>
@@ -141,12 +185,19 @@
                     $sql = "SELECT * FROM recursos WHERE id_proyecto = " . $id_proyecto;
                     $retval = mysql_query($sql);
                     $result = mysql_fetch_array($retval, MYSQL_ASSOC);
+                    $contador = 0;
+                    for($i = 1; $i < 4; $i++) {
+                        if($result['pregunta' . $i] != ''){
+                        $contador++;
+                        }
+                    }
                ?>
                <a href="get_resources_id.php?id_recursos=<?php echo $result['id_recursos']; ?>">
                     <div class="cont-add-canvas">
                     <img src="images/canvas-7.png" alt="">
                     <h3>Recursos Clave</h3>
                     <p>Aprende a crear el mercado al que va diriguido tu idea.</p>
+                    <p><?php echo $contador; ?> / 3</p>
                   </div> 
                 </a> 
            </div>
@@ -155,12 +206,19 @@
                     $sql = "SELECT * FROM alianzas WHERE id_proyecto = " . $id_proyecto;
                     $retval = mysql_query($sql);
                     $result = mysql_fetch_array($retval, MYSQL_ASSOC);
+                    $contador = 0;
+                    for($i = 1; $i < 4; $i++) {
+                        if($result['pregunta' . $i] != ''){
+                        $contador++;
+                        }
+                    }
                ?>
                <a href="get_aliance_id.php?id_alianzas=<?php echo $result['id_alianzas']; ?>">
                     <div class="cont-add-canvas">
                     <img src="images/canvas-8.png" alt="">
                     <h3>Alianzas</h3>
                     <p>Aprende a crear el mercado al que va diriguido tu idea.</p>
+                    <p><?php echo $contador; ?> / 3</p>
                   </div> 
                 </a> 
            </div>
@@ -169,17 +227,24 @@
                     $sql = "SELECT * FROM costos WHERE id_proyecto = " . $id_proyecto;
                     $retval = mysql_query($sql);
                     $result = mysql_fetch_array($retval, MYSQL_ASSOC);
+                    $contador = 0;
+                    for($i = 1; $i < 3; $i++) {
+                        if($result['pregunta' . $i] != ''){
+                        $contador++;
+                        }
+                    }
                ?>
                <a href="get_costs_id.php?id_costos=<?php echo $result['id_costos']; ?>">
                     <div class="cont-add-canvas">
                     <img src="images/canvas-9.png" alt="">
                     <h3>Costos</h3>
                     <p>Aprende a crear el mercado al que va diriguido tu idea.</p>
+                    <p><?php echo $contador; ?> / 2</p>
                   </div> 
                 </a> 
            </div>
            <div class="col-md-4"></div>
-           <div class="col-md-4"><input class="btn btn-listo" value="Descarga tu proyecto" type="submit"></div>
+           <div class="col-md-4"><a href="pdf.php" class="btn btn-listo">Descarga tu proyecto</a></div>
            <div class="col-md-4"></div>
        </div>
     </div>
