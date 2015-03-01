@@ -94,14 +94,14 @@
        <div class="row">
            <div class="col-md-4">
                <?php
-                    $sql = "SELECT * FROM canal WHERE id_proyecto = " . $id_proyecto;
+                    $sql = "SELECT * FROM actividades WHERE id_proyecto = " . $id_proyecto;
                     $retval = mysql_query($sql);
                     $result = mysql_fetch_array($retval, MYSQLI_ASSOC);
                ?>
-               <a href="get_channel_id.php?id_canal=<?php echo $result['id_canal']; ?>">
+               <a href="get_activities_id.php?id_actividades=<?php echo $result['id_actividades']; ?>">
                     <div class="cont-add-canvas">
                     <img src="images/canvas-1.png" alt="">
-                    <h3>Canal</h3>
+                    <h3>Actividades Clave</h3>
                     <p>Aprende a crear el mercado al que va diriguido tu idea.</p>
                   </div> 
                 </a> 

@@ -23,7 +23,7 @@
                 mysql_query($sql);
                 $sql = "INSERT INTO canales_dist (id_proyecto) VALUES (" . $id_proyecto . ")";
                 mysql_query($sql);
-                $sql = "INSERT INTO canal (id_proyecto) VALUES (" . $id_proyecto . ")";
+                $sql = "INSERT INTO actividades (id_proyecto) VALUES (" . $id_proyecto . ")";
                 mysql_query($sql);
                 $sql = "INSERT INTO relacion (id_proyecto) VALUES (" . $id_proyecto . ")";
                 mysql_query($sql);
