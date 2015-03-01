@@ -18,9 +18,9 @@
             <div class="col-md-6">
                <form action="">
                     <div class="cont-center">
-                        <h3>¿Tienes recursos físicos, como instalaciones equipo o maquinaria, que es indispensable para funcionar? </h3>
+                        <h3>¿Qué actividades son importantes para promover tu producto/servicio con tu cliente? </h3>
                         <textarea type="text" class="input-answer" ></textarea>
-                        <p>Ejemplo: Una despulpadora, cortadora de frutas y una autoclave para sellado. </p>
+                        <p>Ejemplo: Teléfono, medios de comunicación, degustaciones y demostraciones en áreas públicas. </p>
                          <input type="submit" class="btn btn-green" value="Siguiente">
                     </div>
                 </form>
