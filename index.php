@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Aprende a fortalecerla de forma interactiva y <gratuita class=""></gratuita>">
+    <meta name="description" content="Aprende a fortalecerla de forma interactiva y gratuita">
     <meta name="author" content="Jon Palma, Lazaro Reyes, Luis Madrid, Tana Sesma, Oscar y Ricardo - www.mixen.mx">
     <link rel="icon" href="favicon.ico">
     <title>Crea</title>

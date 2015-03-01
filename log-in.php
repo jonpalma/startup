@@ -15,7 +15,7 @@
                              $_SESSION['user'] = $row['id_usuario'];
                              //cerrar conexión a BD
                              mysql_close();
-                             header('Location:proyectos.php');
+                             header('Location:create.php');
                              exit;
                          }
     
