@@ -1,3 +1,15 @@
+<?php session_start(); ?>
+<?php 
+    if(!isset($_SESSION['user'])) {
+            header('Location:login.php');
+            exit;
+    } else {
+        $id_propuesta_valor = $_SESSION['id_propuesta_valor'];
+    }
+?>
+<?php 
+    include_once('../bd/inicializar.php');
+?>
 <!DOCTYPE html>
 <html lang="es">
   <head>
