@@ -103,7 +103,17 @@ p {
 }
 
 
+/** ADD **/
 
+.cont-add-pro {
+    max-width: 355px;
+    background-color: #f7f7f7;   
+    border: 1px solid #dedede;
+    height: auto;
+    padding: 40px;
+    text-align: center;
+    margin-bottom: 20px;
+}
 
 .add-info-sup p {
     text-align: center;
