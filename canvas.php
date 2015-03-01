@@ -178,8 +178,12 @@
                   </div> 
                 </a> 
            </div>
+           <div class="col-md-4"></div>
+           <div class="col-md-4"><input class="btn btn-listo" value="Descarga tu proyecto" type="submit"></div>
+           <div class="col-md-4"></div>
        </div>
     </div>
+    <br><br><br><br>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
