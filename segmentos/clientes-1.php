@@ -49,6 +49,8 @@
                   <p><span class="circle-2"></span></p>
                   <p><span class="circle-2"></span></p>
                   <p><span class="circle-2"></span></p>
+                  <p><span class="circle-2"></span></p>
+                  <p><span class="circle-2"></span></p>
               </div>
         </div>
     </div>

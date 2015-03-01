@@ -50,9 +50,6 @@ Costos variables.- Son los que dependen de la producción (comisiones de venta, 
                   <div class="circle">
                     <p><span class="circle-1"></span></p>
                     <p><span class="circle-2"></span></p>
-                    <p><span class="circle-2"></span></p>
-                    <p><span class="circle-2"></span></p>
-                    <p><span class="circle-2"></span></p>
                   </div>
               </div>
         </div>

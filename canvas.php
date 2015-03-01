@@ -36,7 +36,7 @@
   <body>
       <div class="container">
           <div class="head">
-              <div class="info-left"></div>
+              <div class="info-left">Mis proyectos</div>
               <div class="info-right"></div>
           </div>
            <div class="add">
