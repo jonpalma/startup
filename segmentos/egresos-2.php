@@ -10,16 +10,19 @@
             <div class="col-md-3">
                 <div class="cont-left">
                     <img src="../images/canvas-1.png" alt="">
-                    <h3>Canales de distribución</h3>
-                    <p>Modo en que la empresa se comunica con los diferentes segmentos de mercado para llegar  a sus clientes y les proporciona una solución, los canles tienen tres funciones principales: comunicación, distribución y soporte postventa. </p>
+                    <h3>Egresos</h3>
+                    <p>Los egresos son los costos de la operación de tu negocio, estos se dividen en costos fijos y variables.
+Costos fijos.- Son aquellos que no dependen de la producción (Servicios básicos agua, luz, teléfono, renta, etc.)
+Costos variables.- Son los que dependen de la producción (comisiones de venta, costo de materia prima, etc.)
+ </p>
                 </div>
             </div>
             <div class="col-md-6">
                <form action="">
                     <div class="cont-center">
-                        <h3>¿Cuáles son los canales de comunicación con los clientes?</h3>
+                        <h3>¿A cuánto estiman tus costos variables?  </h3>
                         <textarea type="text" class="input-answer" ></textarea>
-                        <p>Ejemplo: Teléfono, medios de comunicación, degustaciones y demostraciones en áreas públicas. </p>
+                        <p>Ejemplo: Para elaborar 100 frascos de mermelada se necesita: Fruta orgánica: 25kg x $50pesos el kilo = $1,250.00, sustituto de azúcar: 10kg x $ 9pesos el kilo =$90.00, envase de vidrio artesanal $10.00 x 1000 productos = 10,000.</p>
                          <input type="submit" class="btn btn-green" value="Siguiente">
                     </div>
                 </form>

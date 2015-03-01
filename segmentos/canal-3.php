@@ -17,9 +17,9 @@
             <div class="col-md-6">
                <form action="">
                     <div class="cont-center">
-                        <h3>¿Cuáles son los canales de comunicación con los clientes?</h3>
+                        <h3>¿Cuál es más efectiva?</h3>
                         <textarea type="text" class="input-answer" ></textarea>
-                        <p>Ejemplo: Teléfono, medios de comunicación, degustaciones y demostraciones en áreas públicas. </p>
+                        <p>Ejemplo: Degustación, porque aparte de retroalimentarnos nos hace generar una venta, ya que prueban el producto y se lo llevan en el momento. .</p>
                          <input type="submit" class="btn btn-green" value="Siguiente">
                     </div>
                 </form>

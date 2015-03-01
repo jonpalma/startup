@@ -17,9 +17,9 @@
             <div class="col-md-6">
                <form action="">
                     <div class="cont-center">
-                        <h3>¿Cuáles son los canales de comunicación con los clientes?</h3>
+                        <h3>¿Cómo se establece comunicación con los clientes?</h3>
                         <textarea type="text" class="input-answer" ></textarea>
-                        <p>Ejemplo: Teléfono, medios de comunicación, degustaciones y demostraciones en áreas públicas. </p>
+                        <p>Ejemplo: Telefonía y medios de promoción tradicionales porque el perfil del cliente es ver televisión, escuchar la radio, lectura de periódico entre otras. </p>
                          <input type="submit" class="btn btn-green" value="Siguiente">
                     </div>
                 </form>

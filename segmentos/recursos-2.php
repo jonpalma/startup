@@ -10,16 +10,17 @@
             <div class="col-md-3">
                 <div class="cont-left">
                     <img src="../images/canvas-1.png" alt="">
-                    <h3>Canales de distribución</h3>
-                    <p>Modo en que la empresa se comunica con los diferentes segmentos de mercado para llegar  a sus clientes y les proporciona una solución, los canles tienen tres funciones principales: comunicación, distribución y soporte postventa. </p>
+                    <h3>Recursos Clave</h3>
+                    <p>Describe los activos más importantes para que el negocio funcione: Físicos, económicos, intelectuales y humanos. 
+ </p>
                 </div>
             </div>
             <div class="col-md-6">
                <form action="">
                     <div class="cont-center">
-                        <h3>¿Cuáles son los canales de comunicación con los clientes?</h3>
+                        <h3>2.  ¿Tienes recursos intelectuales como marcas o patentes?  </h3>
                         <textarea type="text" class="input-answer" ></textarea>
-                        <p>Ejemplo: Teléfono, medios de comunicación, degustaciones y demostraciones en áreas públicas. </p>
+                        <p>Ejemplo: Registro de la marca ante IMPI para su comercialización. </p>
                          <input type="submit" class="btn btn-green" value="Siguiente">
                     </div>
                 </form>
