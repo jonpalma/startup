@@ -54,7 +54,7 @@
                     $retval = mysql_query($sql);
                     $result = mysql_fetch_array($retval, MYSQLI_ASSOC);
                ?>
-               <a href="<?php echo $result['id_clientes']; ?>">
+               <a href="get_clients_id.php?id_clientes=<?php echo $result['id_clientes']; ?>">
                     <div class="cont-add-canvas">
                     <img src="images/canvas-1.png" alt="">
                     <h3>Clientes</h3>
@@ -68,7 +68,7 @@
                     $retval = mysql_query($sql);
                     $result = mysql_fetch_array($retval, MYSQLI_ASSOC);
                ?>
-               <a href="<?php echo $result['id_propuesta_valor']; ?>">
+               <a href="get_prop_id.php?id_propuesta_valor=<?php echo $result['id_propuesta_valor']; ?>">
                     <div class="cont-add-canvas">
                     <img src="images/canvas-1.png" alt="">
                     <h3>Propuesta de Valor</h3>
@@ -82,7 +82,7 @@
                     $retval = mysql_query($sql);
                     $result = mysql_fetch_array($retval, MYSQLI_ASSOC);
                ?>
-               <a href="<?php echo $result['id_canales_dist']; ?>">
+               <a href="get_dist_id.php?id_canales_dist=<?php echo $result['id_canales_dist']; ?>">
                     <div class="cont-add-canvas">
                     <img src="images/canvas-1.png" alt="">
                     <h3>Canales de distribución</h3>
@@ -98,7 +98,7 @@
                     $retval = mysql_query($sql);
                     $result = mysql_fetch_array($retval, MYSQLI_ASSOC);
                ?>
-               <a href="<?php echo $result['id_canal']; ?>">
+               <a href="get_channel_id.php?id_canal=<?php echo $result['id_canal']; ?>">
                     <div class="cont-add-canvas">
                     <img src="images/canvas-1.png" alt="">
                     <h3>Canal</h3>
@@ -112,7 +112,7 @@
                     $retval = mysql_query($sql);
                     $result = mysql_fetch_array($retval, MYSQLI_ASSOC);
                ?>
-               <a href="<?php echo $result['id_relacion']; ?>">
+               <a href="get_rel_id.php?id_relacion=<?php echo $result['id_relacion']; ?>">
                     <div class="cont-add-canvas">
                     <img src="images/canvas-1.png" alt="">
                     <h3>Relación</h3>
@@ -126,7 +126,7 @@
                     $retval = mysql_query($sql);
                     $result = mysql_fetch_array($retval, MYSQLI_ASSOC);
                ?>
-               <a href="<?php echo $result['id_flujo']; ?>">
+               <a href="get_revenue_id.php?id_flujo=<?php echo $result['id_flujo']; ?>">
                     <div class="cont-add-canvas">
                     <img src="images/canvas-1.png" alt="">
                     <h3>Flujo de efectivo</h3>
@@ -142,7 +142,7 @@
                     $retval = mysql_query($sql);
                     $result = mysql_fetch_array($retval, MYSQLI_ASSOC);
                ?>
-               <a href="<?php echo $result['id_recursos']; ?>">
+               <a href="get_resources_id.php?id_recursos=<?php echo $result['id_recursos']; ?>">
                     <div class="cont-add-canvas">
                     <img src="images/canvas-1.png" alt="">
                     <h3>Recursos Clave</h3>
@@ -156,7 +156,7 @@
                     $retval = mysql_query($sql);
                     $result = mysql_fetch_array($retval, MYSQLI_ASSOC);
                ?>
-               <a href="<?php echo $result['id_alianzas']; ?>">
+               <a href="get_aliance_id.php?id_alianzas=<?php echo $result['id_alianzas']; ?>">
                     <div class="cont-add-canvas">
                     <img src="images/canvas-1.png" alt="">
                     <h3>Alianzas</h3>
@@ -168,9 +168,9 @@
                <?php
                     $sql = "SELECT * FROM costos WHERE id_proyecto = " . $id_proyecto;
                     $retval = mysql_query($sql);
-                    $result = mysql_fetch_array($retval, MYSQLI_ASSOC);
+                    $result = mysql_fetch_array($retval, MYSQL_ASSOC);
                ?>
-               <a href="<?php echo $result['id_costos']; ?>">
+               <a href="get_costs_id.php?id_costos=<?php echo $result['id_costos']; ?>">
                     <div class="cont-add-canvas">
                     <img src="images/canvas-1.png" alt="">
                     <h3>Costos</h3>
