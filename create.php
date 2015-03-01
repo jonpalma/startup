@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
@@ -16,7 +16,7 @@
     <link rel="icon" href="favicon.ico">
     <title></title>
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" el="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet">
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
@@ -39,7 +39,7 @@
                <div class="add-create">
                   <div class="add-info-sup">
                    <h3><Proye></Proye>Mi primer idea</h3>
-                    <p>Ingresa el nombre y una breve pero buena descripción de tu idea.</p>
+                    <p>Ingresa el nombre y una breve pero buena descripciÃ³n de tu idea.</p>
                   </div>
                    <form action="agregar-proyecto.php" method="post">
                           <div class="cont-add">
@@ -53,7 +53,7 @@
                 </div>
               </div>
             </div>
-		</div>   
+		</div> 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
