@@ -1,10 +1,10 @@
 CREATE DATABASE  IF NOT EXISTS `start_up` /*!40100 DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci */;
 USE `start_up`;
--- MySQL dump 10.13  Distrib 5.6.17, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 5.6.17, for Win32 (x86)
 --
 -- Host: 127.0.0.1    Database: start_up
 -- ------------------------------------------------------
--- Server version	5.6.20
+-- Server version	5.6.21
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -33,7 +33,7 @@ CREATE TABLE `actividades` (
   PRIMARY KEY (`id_actividades`),
   KEY `id_proyecto_actividades_idx` (`id_proyecto`),
   CONSTRAINT `id_proyecto_actividades` FOREIGN KEY (`id_proyecto`) REFERENCES `proyectos` (`id_proyecto`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -42,7 +42,7 @@ CREATE TABLE `actividades` (
 
 LOCK TABLES `actividades` WRITE;
 /*!40000 ALTER TABLE `actividades` DISABLE KEYS */;
-INSERT INTO `actividades` VALUES (1,1,'ValidaciÃ³n que la fruta sea orgÃ¡nica, la preparaciÃ³n de la mermelada cubre con las normas de salubridad necesarias y la producciÃ³n cumple los estÃ¡ndares de bajo en azÃºcar. ','Llamar periÃ³dicamente a nuestros distribuidores para obtener informaciÃ³n sobre el que tanto se estÃ¡ desplazando el producto en el mercado. ','TelÃ©fono, medios de comunicaciÃ³n, degustaciones y demostraciones en Ã¡reas pÃºblicas.');
+INSERT INTO `actividades` VALUES (1,1,'ValidaciÃ³n que la fruta sea orgÃ¡nica, la preparaciÃ³n de la mermelada cubre con las normas de salubridad necesarias y la producciÃ³n cumple los estÃ¡ndares de bajo en azÃºcar. ','Llamar periÃ³dicamente a nuestros distribuidores para obtener informaciÃ³n sobre el que tanto se estÃ¡ desplazando el producto en el mercado. ','TelÃ©fono, medios de comunicaciÃ³n, degustaciones y demostraciones en Ã¡reas pÃºblicas.'),(2,2,'','',''),(3,3,'','','');
 /*!40000 ALTER TABLE `actividades` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -62,7 +62,7 @@ CREATE TABLE `alianzas` (
   PRIMARY KEY (`id_alianzas`),
   KEY `id_proyecto_alianzas_idx` (`id_proyecto`),
   CONSTRAINT `id_proyecto_alianzas` FOREIGN KEY (`id_proyecto`) REFERENCES `proyectos` (`id_proyecto`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -71,7 +71,7 @@ CREATE TABLE `alianzas` (
 
 LOCK TABLES `alianzas` WRITE;
 /*!40000 ALTER TABLE `alianzas` DISABLE KEYS */;
-INSERT INTO `alianzas` VALUES (1,1,'Los distribuidores, promotores y salubridad asÃ­ como organismo certificador de productos orgÃ¡nicos. ','Productores de fruta orgÃ¡nica, proveedores de envases de vidrio y de sustituto de azÃºcar.','Los distribuidores son los encargados de hacer llegar el producto a las tiendas y los promotores son las personas que promocionan el producto con los posibles clientes. ');
+INSERT INTO `alianzas` VALUES (1,1,'Los distribuidores, promotores y salubridad asÃ­ como organismo certificador de productos orgÃ¡nicos. ','Productores de fruta orgÃ¡nica, proveedores de envases de vidrio y de sustituto de azÃºcar.','Los distribuidores son los encargados de hacer llegar el producto a las tiendas y los promotores son las personas que promocionan el producto con los posibles clientes. '),(2,2,'','',''),(3,3,'','','');
 /*!40000 ALTER TABLE `alianzas` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -93,7 +93,7 @@ CREATE TABLE `canales_dist` (
   PRIMARY KEY (`id_canales_dist`),
   KEY `id_proyecto_canal_idx` (`id_proyecto`),
   CONSTRAINT `id_proyecto_canal_dist` FOREIGN KEY (`id_proyecto`) REFERENCES `proyectos` (`id_proyecto`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -102,7 +102,7 @@ CREATE TABLE `canales_dist` (
 
 LOCK TABLES `canales_dist` WRITE;
 /*!40000 ALTER TABLE `canales_dist` DISABLE KEYS */;
-INSERT INTO `canales_dist` VALUES (1,1,'TelÃ©fono, medios de comunicaciÃ³n, degustaciones y demostraciones en Ã¡reas pÃºblicas. ','Llamada telefÃ³nica ya que el perfil de nuestro cliente no utiliza redes sociales comÃºnmente.','DegustaciÃ³n, porque aparte de retroalimentarnos nos hace generar una venta, ya que prueban el producto y se lo llevan en el momento.','TelefonÃ­a y medios de promociÃ³n tradicionales porque el perfil del cliente es ver televisiÃ³n, escuchar la radio, lectura de periÃ³dico entre otras. ','PeriÃ³dicamente y vÃ­a telefÃ³nica. ');
+INSERT INTO `canales_dist` VALUES (1,1,'TelÃ©fono, medios de comunicaciÃ³n, degustaciones y demostraciones en Ã¡reas pÃºblicas. ','Llamada telefÃ³nica ya que el perfil de nuestro cliente no utiliza redes sociales comÃºnmente.','DegustaciÃ³n, porque aparte de retroalimentarnos nos hace generar una venta, ya que prueban el producto y se lo llevan en el momento.','TelefonÃ­a y medios de promociÃ³n tradicionales porque el perfil del cliente es ver televisiÃ³n, escuchar la radio, lectura de periÃ³dico entre otras. ','PeriÃ³dicamente y vÃ­a telefÃ³nica. '),(2,2,'','','','',''),(3,3,'','','','','');
 /*!40000 ALTER TABLE `canales_dist` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -125,7 +125,7 @@ CREATE TABLE `clientes` (
   PRIMARY KEY (`id_clientes`),
   KEY `id_proyecto_idx` (`id_proyecto`),
   CONSTRAINT `id_proyecto_cliente` FOREIGN KEY (`id_proyecto`) REFERENCES `proyectos` (`id_proyecto`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -134,7 +134,7 @@ CREATE TABLE `clientes` (
 
 LOCK TABLES `clientes` WRITE;
 /*!40000 ALTER TABLE `clientes` DISABLE KEYS */;
-INSERT INTO `clientes` VALUES (1,1,'Chihuahua','Sexo indistinto','24','Lujosa','Servicio a domicilio, en supermercados y tiendas naturistas','Personas que les gusta pagar en efectivo, amas de casa, jubilados, personas con ingresos mayores a $25,000 pesos mensuales y personas con problemas digestivos.');
+INSERT INTO `clientes` VALUES (1,1,'Chihuahua','Sexo indistinto','24','Lujosa','Servicio a domicilio, en supermercados y tiendas naturistas','Personas que les gusta pagar en efectivo, amas de casa, jubilados, personas con ingresos mayores a $25,000 pesos mensuales y personas con problemas digestivos.'),(2,2,'','','','','',''),(3,3,'','','','','','');
 /*!40000 ALTER TABLE `clientes` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -153,7 +153,7 @@ CREATE TABLE `costos` (
   PRIMARY KEY (`id_costos`),
   KEY `id_proyecto_costos_idx` (`id_proyecto`),
   CONSTRAINT `id_proyecto_costos` FOREIGN KEY (`id_proyecto`) REFERENCES `proyectos` (`id_proyecto`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -162,7 +162,7 @@ CREATE TABLE `costos` (
 
 LOCK TABLES `costos` WRITE;
 /*!40000 ALTER TABLE `costos` DISABLE KEYS */;
-INSERT INTO `costos` VALUES (1,1,'Costos fijos: Agua $ 500.00, Luz $2,000.00, telÃ©fono e internet $600.00, renta $6,000.00 sueldo de dos empleados $12,000. ','Para elaborar 100 frascos de mermelada se necesita: Fruta orgÃ¡nica: 25kg x $50pesos el kilo = $1,250.00, sustituto de azÃºcar: 10kg x $ 9pesos el kilo =$90.00, envase de vidrio artesanal $10.00 x 1000 productos = 10,000.');
+INSERT INTO `costos` VALUES (1,1,'Costos fijos: Agua $ 500.00, Luz $2,000.00, telÃ©fono e internet $600.00, renta $6,000.00 sueldo de dos empleados $12,000. ','Para elaborar 100 frascos de mermelada se necesita: Fruta orgÃ¡nica: 25kg x $50pesos el kilo = $1,250.00, sustituto de azÃºcar: 10kg x $ 9pesos el kilo =$90.00, envase de vidrio artesanal $10.00 x 1000 productos = 10,000.'),(2,2,'',''),(3,3,'','');
 /*!40000 ALTER TABLE `costos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -180,7 +180,7 @@ CREATE TABLE `flujo` (
   PRIMARY KEY (`id_flujo`),
   KEY `id_proyecto_flujo_idx` (`id_proyecto`),
   CONSTRAINT `id_proyecto_flujo` FOREIGN KEY (`id_proyecto`) REFERENCES `proyectos` (`id_proyecto`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -189,7 +189,7 @@ CREATE TABLE `flujo` (
 
 LOCK TABLES `flujo` WRITE;
 /*!40000 ALTER TABLE `flujo` DISABLE KEYS */;
-INSERT INTO `flujo` VALUES (1,1,'Pago con tarjeta o de contado al igual que venta por mayoreo con sistema de crÃ©dito para distribuidores. ');
+INSERT INTO `flujo` VALUES (1,1,'Pago con tarjeta o de contado al igual que venta por mayoreo con sistema de crÃ©dito para distribuidores. '),(2,2,''),(3,3,'');
 /*!40000 ALTER TABLE `flujo` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -211,7 +211,7 @@ CREATE TABLE `propuesta_valor` (
   PRIMARY KEY (`id_propuesta_valor`),
   KEY `id_proyecto_idx` (`id_proyecto`),
   CONSTRAINT `id_proyecto_propuesta` FOREIGN KEY (`id_proyecto`) REFERENCES `proyectos` (`id_proyecto`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -220,7 +220,7 @@ CREATE TABLE `propuesta_valor` (
 
 LOCK TABLES `propuesta_valor` WRITE;
 /*!40000 ALTER TABLE `propuesta_valor` DISABLE KEYS */;
-INSERT INTO `propuesta_valor` VALUES (1,1,'Gente diabÃ©tica que no puede comer azÃºcar pero quiere consumir mermelada','Disfrutar una propuesta sana alimenticia que no perjudique la salud','Mermelada en envase de 500grs con decoraciÃ³n artesanal. ','Es orgÃ¡nica, gourmet y entrega a domicilio en cualquier parte del paÃ­s.','OrgÃ¡nico, artesanal, precio, saludable.');
+INSERT INTO `propuesta_valor` VALUES (1,1,'Gente diabÃ©tica que no puede comer azÃºcar pero quiere consumir mermelada','Disfrutar una propuesta sana alimenticia que no perjudique la salud','Mermelada en envase de 500grs con decoraciÃ³n artesanal. ','Es orgÃ¡nica, gourmet y entrega a domicilio en cualquier parte del paÃ­s.','OrgÃ¡nico, artesanal, precio, saludable.'),(2,2,'','','','',''),(3,3,'','','','','');
 /*!40000 ALTER TABLE `propuesta_valor` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -239,7 +239,7 @@ CREATE TABLE `proyectos` (
   PRIMARY KEY (`id_proyecto`),
   KEY `id_usuarios_idx` (`id_usuario`),
   CONSTRAINT `id_usuario` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id_usuario`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -248,7 +248,7 @@ CREATE TABLE `proyectos` (
 
 LOCK TABLES `proyectos` WRITE;
 /*!40000 ALTER TABLE `proyectos` DISABLE KEYS */;
-INSERT INTO `proyectos` VALUES (1,'Proyecto 1','Esto es una prueba',1);
+INSERT INTO `proyectos` VALUES (1,'Proyecto 1','Esto es una prueba',1),(2,'prueba mil y asi','hola mundo',2),(3,'ideas','ideas',3);
 /*!40000 ALTER TABLE `proyectos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -268,7 +268,7 @@ CREATE TABLE `recursos` (
   PRIMARY KEY (`id_recursos`),
   KEY `id_proyecto_recursos_idx` (`id_proyecto`),
   CONSTRAINT `id_proyecto_recursos` FOREIGN KEY (`id_proyecto`) REFERENCES `proyectos` (`id_proyecto`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -277,7 +277,7 @@ CREATE TABLE `recursos` (
 
 LOCK TABLES `recursos` WRITE;
 /*!40000 ALTER TABLE `recursos` DISABLE KEYS */;
-INSERT INTO `recursos` VALUES (1,1,'Una despulpadora, cortadora de frutas y una autoclave para sellado. ','Registro de la marca ante IMPI para su comercializaciÃ³n. ','La persona encargada de elaborar la mermelada y el encargado de distribuir el producto. ');
+INSERT INTO `recursos` VALUES (1,1,'Una despulpadora, cortadora de frutas y una autoclave para sellado. ','Registro de la marca ante IMPI para su comercializaciÃ³n. ','La persona encargada de elaborar la mermelada y el encargado de distribuir el producto. '),(2,2,'','',''),(3,3,'','','');
 /*!40000 ALTER TABLE `recursos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -296,7 +296,7 @@ CREATE TABLE `relacion` (
   PRIMARY KEY (`id_relacion`),
   KEY `id_proyecto_relacion_idx` (`id_proyecto`),
   CONSTRAINT `id_proyecto_relacion` FOREIGN KEY (`id_proyecto`) REFERENCES `proyectos` (`id_proyecto`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -305,7 +305,7 @@ CREATE TABLE `relacion` (
 
 LOCK TABLES `relacion` WRITE;
 /*!40000 ALTER TABLE `relacion` DISABLE KEYS */;
-INSERT INTO `relacion` VALUES (1,1,'Autoservicio y con un numero 01-800 para recepciÃ³n de sugerencias y quejas. ','Llamar periÃ³dicamente a nuestros distribuidores para obtener informaciÃ³n sobre el que tanto se estÃ¡ desplazando el producto en el mercado. ');
+INSERT INTO `relacion` VALUES (1,1,'Autoservicio y con un numero 01-800 para recepciÃ³n de sugerencias y quejas. ','Llamar periÃ³dicamente a nuestros distribuidores para obtener informaciÃ³n sobre el que tanto se estÃ¡ desplazando el producto en el mercado. '),(2,2,'',''),(3,3,'','');
 /*!40000 ALTER TABLE `relacion` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -321,7 +321,7 @@ CREATE TABLE `usuarios` (
   `nombre_usuario` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
   `password_usuario` blob NOT NULL,
   PRIMARY KEY (`id_usuario`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -330,7 +330,7 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES (1,'startup',',����BP�&\\j`\0s�');
+INSERT INTO `usuarios` VALUES (1,'startup',',����BP�&\\j`\0s�'),(2,'prueba','Jga�}���J�d�pT'),(3,'jon.palma@mixen.mx','�^-����V��	UO~');
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -343,4 +343,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-03-01 11:29:15
+-- Dump completed on 2015-03-06 11:13:56

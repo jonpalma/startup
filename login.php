@@ -37,7 +37,7 @@
       <?php
             if(isset($_SESSION['loginInvalido']) || isset($_SESSION['errorLogin'])) {
                 if($_SESSION['loginInvalido'] == 1) { ?>
-                   <span class="login-invalido"><p>Usuario o contraseña incorrecto</p></span>
+                   <span class="login-invalido"><p>Usuario o contraseÃ±a incorrecto</p></span>
                    <p style="visibility:hidden"><?php echo $_SESSION['errorLogin'];?></p>
                 <?php
                 }
@@ -50,7 +50,7 @@
               <div class="login-cont">
                <div class="login-text"><h3>Login</h3></div>
                <div class="input"><input name="user" type="text" class="input-login" placeholder="Usuario"></div>
-               <div class="input"><input name="pass" type="password" class="input-login" placeholder="Contraseña"></div>
+               <div class="input"><input name="pass" type="password" class="input-login" placeholder="ContraseÃ±a"></div>
                 <p><input type="checkbox" class="checkbox">Recordar</p>
                 <input type="submit" class="btn btn-login" value="INICIAR">
                 </div>
