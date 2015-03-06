@@ -7,6 +7,7 @@
 ?>
 <?php 
     include_once('bd/inicializar.php');
+    $id_user = $_SESSION['user'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -46,7 +47,7 @@
             <div class="container">
                 <div class="row">
                     <?php
-                        $proyectos = mysql_query("SELECT * FROM proyectos WHERE id_usuario = 1");
+                        $proyectos = mysql_query("SELECT * FROM proyectos WHERE id_usuario = " . $id_user);
                         while ($query = mysql_fetch_array($proyectos, MYSQL_ASSOC)) {
                         ?>
                         <div class="col-md-4">
