@@ -6,7 +6,6 @@
     } else {
             if(isset($_SESSION['user'])) {
                 $id_user = $_SESSION['user'];
-                echo $id_user;
                 include_once('bd/inicializar.php');
                 
                 $nombre_proyecto = $_POST['project_name'];
