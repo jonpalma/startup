@@ -33,8 +33,8 @@
          <div class="row">
             <div class="col-lg-12">
               <div class="head">
-                  <div class="info-left"></div>
-                  <div class="info-right"></div>
+                  <div class="info-left"><a href="proyectos.php">Mis proyectos</a></div>
+              <div class="info-right"><a href="logout.php">salir</a></div>
               </div>
                <div class="add-create">
                   <div class="add-info-sup">

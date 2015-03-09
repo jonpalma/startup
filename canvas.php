@@ -37,8 +37,8 @@
   <body>
       <div class="container">
           <div class="head">
-              <div class="info-left">Mis proyectos</div>
-              <div class="info-right"></div>
+              <div class="info-left"><a href="proyectos.php">Mis proyectos</a></div>
+              <div class="info-right"><a href="logout.php">salir</a></div>
           </div>
            <div class="add">
               <div class="add-info-sup">
@@ -244,7 +244,7 @@
                 </a> 
            </div>
            <div class="col-md-4"></div>
-           <div class="col-md-4"><a href="pdf.php" class="btn btn-listo">Descarga tu proyecto</a></div>
+           <div class="col-md-4"><a href="print_project.php" class="btn btn-listo">Descarga tu proyecto</a></div>
            <div class="col-md-4"></div>
        </div>
     </div>

@@ -13,9 +13,9 @@
                            $loginInvalido = 1;
                          } else {
                              $_SESSION['user'] = $row['id_usuario'];
-                             //cerrar conexión a BD
+                             //cerrar conexiï¿½n a BD
                              mysql_close();
-                             header('Location:create.php');
+                             header('Location:proyectos.php');
                              exit;
                          }
     

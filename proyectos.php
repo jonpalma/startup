@@ -34,8 +34,8 @@
   </head>
   <body>
      <div class="head">
-         <div class="info-left"></div>
-         <div class="info-right"></div>
+         <div class="info-left"><a href="create.php">Crear nuevo proyecto</a></div>
+         <div class="info-right"><a href="logout.php">salir</a></div>
      </div>
       <div class="container">
            <div class="add">

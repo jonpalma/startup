@@ -1,6 +1,6 @@
 <?php
     require('modules/phpToPDF.php');
-    $source = "http://" . $_SERVER['HTTP_HOST'] . "/prueba.php";
+    $source = "http://" . $_SERVER['HTTP_HOST'] . "/pdf.php";
     //Set Your Options -- see documentation for all options
     $pdf_options = array(
           "source_type" => 'url',
