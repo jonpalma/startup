@@ -4,7 +4,7 @@
     //Set Your Options -- see documentation for all options
     $pdf_options = array(
           "source_type" => 'url',
-          "source" => 'pdf.php',
+          "source" => $source,
           "action" => 'view');
 
     //Code to generate PDF file from options above
