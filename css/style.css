@@ -21,7 +21,6 @@ body {
 /** Home **/
 
 .home {
-    width: 757px;
     margin: 0 auto; 
     margin-top: 10%;
     text-align: center;
@@ -41,7 +40,7 @@ body {
 }
 
 .btn-star {
-    width: 327px;
+    max-width: 327px;
     height: 71px;
     display: block;
     background-color:#00e69d;

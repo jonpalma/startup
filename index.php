@@ -27,20 +27,24 @@
   </head>
   <body>
   <div class="container">
-      <div class="home">
-        <img src="images/logo.png" alt="Crea logotipo">
-          <p>Donde lo más valioso es llevar a cabo tu idea. <br> 
-             Aprende a fortalecerla de forma interactiva y gratuita.</p>
-             <a href="login.php" type="button" class="btn btn-star">COMENZAR</a>
-      </div>
-			<div class="main">
-				<ul id="cbp-bislideshow" class="cbp-bislideshow">
-          <li><img src="images/4.jpg" alt="image04"/></li>
-					<li><img src="images/3.jpg" alt="image03"/></li>
-          <li><img src="images/1.jpg" alt="image01"/></li>
-				</ul>
-			</div>
+     <div class="row">
+        <div class="col-lg-12">
+            <div class="home">
+                <img src="images/logo.png" alt="Crea logotipo">
+                  <p>Donde lo más valioso es llevar a cabo tu idea. <br> 
+                     Aprende a fortalecerla de forma interactiva y gratuita.</p>
+                     <a href="login.php" type="button" class="btn btn-star">COMENZAR</a>
+            </div>
 		</div>
+       </div>
+    </div>
+    <div class="main">
+        <ul id="cbp-bislideshow" class="cbp-bislideshow">
+            <li><img src="images/4.jpg" alt="image04"/></li>
+            <li><img src="images/3.jpg" alt="image03"/></li>
+            <li><img src="images/1.jpg" alt="image01"/></li>
+        </ul>
+    </div>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
