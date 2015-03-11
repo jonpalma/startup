@@ -1,5 +1,5 @@
 <?php session_start(); ?>
-<?php 
+<?php
     if(!isset($_SESSION['user'])) {
             header('Location:login.php');
             exit;
@@ -7,7 +7,7 @@
         $id_propuesta_valor = $_SESSION['id_propuesta_valor'];
     }
 ?>
-<?php 
+<?php
     include_once('../bd/inicializar.php');
 ?>
 <!DOCTYPE html>
