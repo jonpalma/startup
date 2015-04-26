@@ -35,18 +35,27 @@
   <body>
   <div class="container">
       <?php
-            if(isset($_SESSION['username_invalido']) || isset($_SESSION['pass_invalido'])) {
-                if($_SESSION['username_invalido'] == 1) { ?>
+                if(isset($_SESSION['username_invalido'])) { ?>
                    <span class="login-invalido"><p>El usuario no es una dirección de correo valida</p></span>
                 <?php
-                } else if($_SESSION['pass_invalido']) { ?>
+                    unset($_SESSION['username_invalido']);
+                } else if(isset($_SESSION['username_exists'])) { ?>
+                   <span class="login-invalido"><p>Ese usuario ya existe</p></span>
+                <?php 
+                    unset($_SESSION['username_exists']);
+                } else if(isset($_SESSION['pass_no_match'])) { ?>
                    <span class="login-invalido"><p>Las contraseñas proporcionadas no coinciden</p></span>
                 <?php 
-                
+                    unset($_SESSION['pass_no_match']);
+                }else if(isset($_SESSION['pass_invalido'])) { ?>
+                    <span class="login-invalido"><p>Contraseña debe tener 6 carácteres mínimo, por lo menos una Mayúscula, minúsculas y número</p></span>
+                <?php
+                    unset($_SESSION['pass_invalido']);
+                }else if(isset($_SESSION['campos_vacios'])) { ?>
+                    <span class="login-invalido"><p>Campos vacios favor de llenar toda la información</p></span>
+                <?php
+                    unset($_SESSION['campos_vacios']);
                 }
-                unset($_SESSION['username_invalido']);
-                unset($_SESSION['pass_invalido']);
-            }
         ?>
       <form action="registration.php" method="post">
           <div class="login">

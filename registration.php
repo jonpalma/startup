@@ -4,7 +4,8 @@
     include_once('bd/inicializar.php');
     
     if(!isset($_POST['user']) || !isset($_POST['pass']) || !isset($_POST['passCheck'])) {
-        header('Location:create.php');
+        $_SESSION['campos_vacios'] = 1;
+        header('Location:register.php');
         exit;
     } else {
         $username = $_POST['user'];
@@ -15,8 +16,15 @@
             $_SESSION['username_invalido'] = 1;
             header('Location:register.php');
             exit;  
-        } else if(!validatePasswords($password, $passwordC)) {
+        } else if(!checkUserExists($username)) {
+            $_SESSION['username_exists'] = 1;
+            header('Location:register.php');
+        } else if(!validatePassword($password)) {
             $_SESSION['pass_invalido'] = 1;
+            header('Location:register.php');
+            exit;
+        }else if(!validatePasswords($password, $passwordC)) { 
+            $_SESSION['pass_no_match'] = 1;
             header('Location:register.php');
             exit;
         } else {
@@ -36,11 +44,31 @@
         }
     }
     
+    function validatePassword($password) {
+        if(preg_match("/(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/", $password)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
     function validatePasswords($password, $passwordC) {
         if($password == $passwordC) {
             return true;
         } else {
             return false;
+        }
+    }
+    
+    function checkUserExists($username) {
+        $sql = "SELECT nombre_usuario FROM usuarios WHERE nombre_usuario = '" . $username . "'";
+        
+        $query = mysql_query($sql);
+        
+        if(mysql_num_rows($query) != 0) {
+            return false;
+        } else {
+            return true;
         }
     }
     
