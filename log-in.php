@@ -4,7 +4,6 @@
     $usuario = $_POST['user'];
     $password = $_POST['pass'];
     
-    $error = '';
     $loginInvalido = 0;
     $sql = mysql_query("SELECT * FROM usuarios"
                     . " WHERE nombre_usuario = '" . $usuario . "' AND password_usuario = aes_encrypt('" . $password . "', 'startup_weekend') LIMIT 1;");
@@ -21,6 +20,5 @@
     
     if($error != '' || $loginInvalido != 0) {
         $_SESSION['loginInvalido'] = $loginInvalido;
-        $_SESSION['errorLogin'] = $error;
         header('Location:login.php');
     }

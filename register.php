@@ -16,7 +16,7 @@
     <link rel="icon" href="favicon.ico">
     <title></title>
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" el="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet">
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
@@ -35,22 +35,33 @@
   <body>
   <div class="container">
       <?php
-            if(isset($_SESSION['loginInvalido']) || isset($_SESSION['errorLogin'])) {
-                if($_SESSION['loginInvalido'] == 1) { ?>
-                   <span class="login-invalido"><p>Usuario o contraseña incorrecto</p></span>
+            if(isset($_SESSION['username_invalido']) || isset($_SESSION['pass_invalido'])) {
+                if($_SESSION['username_invalido'] == 1) { ?>
+                   <span class="login-invalido"><p>El usuario no es una dirección de correo valida</p></span>
                 <?php
+                } else if($_SESSION['pass_invalido']) { ?>
+                   <span class="login-invalido"><p>Las contraseñas proporcionadas no coinciden</p></span>
+                <?php 
+                
                 }
-                unset($_SESSION['loginInvalido']);
+                unset($_SESSION['username_invalido']);
+                unset($_SESSION['pass_invalido']);
             }
         ?>
-      <form action="log-in.php" method="post">
+      <form action="registration.php" method="post">
           <div class="login">
               <div class="login-cont">
-               <div class="login-text"><h3>Login</h3></div>
-               <div class="input"><input name="user" type="text" class="input-login" placeholder="Usuario"></div>
-               <div class="input"><input name="pass" type="password" class="input-login" placeholder="Contraseña"></div>
-                <p><input type="checkbox" class="checkbox">Recordar</p>
-                <input type="submit" class="btn btn-login" value="INICIAR">
+               <div class="login-text"><h3>Register</h3></div>
+               <div class="input">
+                   <input id="user" name="user" type="text" class="input-login" placeholder="usuario@dominio.com">
+                   <p id="error-user" class="bg-danger hidden"></p>
+               </div>
+               <div class="input">
+                   <input id="password" name="pass" type="password" class="input-login" placeholder="Contraseña">
+                   <p id="error-pass" class="bg-danger hidden"></p>
+               </div>
+               <div class="input"><input id="passwordC" name="passCheck" type="password" class="input-login" placeholder="Confirmar contraseña"></div>
+                <input type="submit" class="btn btn-login" value="REGISTRARSE">
                 </div>
             </div>
       </form>
@@ -73,6 +84,7 @@
     <!-- imagesLoaded jQuery plugin by @desandro : https://github.com/desandro/imagesloaded -->
 		<script src="js/jquery.imagesloaded.min.js"></script>
 		<script src="js/cbpBGSlideshow.min.js"></script>
+                <script src="js/validations.js"></script>
 		<script>
 			$(function() {
 				cbpBGSlideshow.init();

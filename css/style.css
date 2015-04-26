@@ -64,7 +64,6 @@ body {
 
 .login {
     width: 418px;
-    height: 450px;
     background-color: rgba(255, 255, 255, 0.9);
     border: 1px solid #f7f7f7;
     margin: 0 auto;
@@ -283,5 +282,18 @@ body {
     background:rgba(0, 185, 131, 0.2);
     display: block;
     margin: 0 auto;
+}
+
+.success {
+    border: 1px solid #5cb85c;
+}
+
+.danger {
+    border: 1px solid #d9534f;
+}
+
+#error-user, #error-pass {
+    font-size: 16px;
+    color: #d9534f;
 }
 
