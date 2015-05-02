@@ -305,3 +305,13 @@ body {
     width: 100%;
 }
 
+.captcha {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100% !important;
+}
+
+.margin-bottom {
+    margin-bottom: 30px;
+}
+

@@ -1,6 +1,6 @@
 $(function() {
 //Validación de campos
-        var regexPassword = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/;
+        var regexPassword = /(?=.*\d)(?=.*[a-z]).{6,}/;
         var regexEmail = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
     $('#user').focusout(function() {
@@ -32,7 +32,7 @@ $(function() {
                 $('#password').addClass('bg-danger danger');
                 $('#password').removeClass('bg-success success');
                 $('#error-pass').removeClass('hidden');
-                $('#error-pass').text('La contraseña debe contener 6 carácteres mínimo una Mayúscula, minúscula y un número');
+                $('#error-pass').text('La contraseña debe contener 6 carácteres mínimo un número y letras');
             }
         } else {
             $('#password').removeClass('bg-success success bg-danger danger');

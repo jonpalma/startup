@@ -244,7 +244,7 @@
                 </a> 
            </div>
            <div class="col-md-4"></div>
-           <div class="col-md-4"><a href="print_project.php" class="btn btn-listo">Descarga tu proyecto</a></div>
+           <div class="col-md-4"><a href="pdf.php?id_proyecto=<?php echo $_SESSION['id_proyecto']; ?>" class="btn btn-listo">Visualizar tu proyecto</a></div>
            <div class="col-md-4"></div>
        </div>
     </div>

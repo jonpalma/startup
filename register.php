@@ -26,6 +26,8 @@
 	<link rel="stylesheet" type="text/css" href="css/default.css" />
 	<link rel="stylesheet" type="text/css" href="css/component.css" />
 	<script src="js/modernizr.custom.js"></script>
+    <!-- Script Recaptcha -->
+    <script src='https://www.google.com/recaptcha/api.js'></script>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -36,25 +38,29 @@
   <div class="container">
       <?php
                 if(isset($_SESSION['username_invalido'])) { ?>
-                   <span class="login-invalido"><p>El usuario no es una dirección de correo valida</p></span>
+      <div class="col-sm-12"><span class="login-invalido"><p>El usuario no es una dirección de correo valida</p></span></div>
                 <?php
                     unset($_SESSION['username_invalido']);
                 } else if(isset($_SESSION['username_exists'])) { ?>
-                   <span class="login-invalido"><p>Ese usuario ya existe</p></span>
+                   <div class="col-sm-12"><span class="login-invalido"><p>Ese usuario ya existe</p></span></div>
                 <?php 
                     unset($_SESSION['username_exists']);
                 } else if(isset($_SESSION['pass_no_match'])) { ?>
-                   <span class="login-invalido"><p>Las contraseñas proporcionadas no coinciden</p></span>
+                   <div class="col-sm-12"><span class="login-invalido"><p>Las contraseñas proporcionadas no coinciden</p></span></div>
                 <?php 
                     unset($_SESSION['pass_no_match']);
                 }else if(isset($_SESSION['pass_invalido'])) { ?>
-                    <span class="login-invalido"><p>Contraseña debe tener 6 carácteres mínimo, por lo menos una Mayúscula, minúsculas y número</p></span>
+                   <div class="col-sm-12"><span class="login-invalido"><p>La contraseña debe contener 6 carácteres mínimo un número y letras</p></span></div>
                 <?php
                     unset($_SESSION['pass_invalido']);
                 }else if(isset($_SESSION['campos_vacios'])) { ?>
-                    <span class="login-invalido"><p>Campos vacios favor de llenar toda la información</p></span>
+                    <div class="col-sm-12"><span class="login-invalido"><p>Campos vacios favor de llenar toda la información</p></span></div>
                 <?php
                     unset($_SESSION['campos_vacios']);
+                }else if(isset($_SESSION['captcha'])) { ?>
+                    <div class="col-sm-12"><span class="login-invalido"><p><?php print_r($_SESSION['captcha']); ?></p></span></div>
+                <?php
+                    unset($_SESSION['captcha']);
                 }
         ?>
       <form action="registration.php" method="post">
@@ -70,6 +76,7 @@
                    <p id="error-pass" class="bg-danger hidden"></p>
                </div>
                <div class="input"><input id="passwordC" name="passCheck" type="password" class="input-login" placeholder="Confirmar contraseña"></div>
+               <div class="input"><div class="g-recaptcha captcha" data-sitekey="6LecPQYTAAAAAMf0c4MjLkAOsc4mrRqp1k8GgaAA" data-theme="dark"></div></div>
                 <input type="submit" class="btn btn-login" value="REGISTRARSE">
                 </div>
             </div>
