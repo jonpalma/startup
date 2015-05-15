@@ -6,7 +6,6 @@
     } else {
         $id_proyecto = $_GET['id_proyecto'];
         include_once('bd/inicializar.php');
-        require_once('dompdf/dompdf_config.inc.php');
     }
 ?>
 <!DOCTYPE html>
