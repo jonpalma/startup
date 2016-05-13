@@ -7,7 +7,7 @@
     <meta name="description" content="Aprende a fortalecerla de forma interactiva y gratuita">
     <meta name="author" content="Jon Palma, Lazaro Reyes, Luis Madrid, Tana Sesma, Oscar y Ricardo - www.mixen.mx">
     <link rel="icon" href="favicon.ico">
-    <title>Crea</title>
+    <title>Crea Ideas</title>
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
@@ -34,6 +34,7 @@
                   <p>Donde lo más valioso es llevar a cabo tu idea. <br> 
                      Aprende a fortalecerla de forma interactiva y gratuita.</p>
                      <a href="login.php" type="button" class="btn btn-star">COMENZAR</a>
+                     <h3><a href="register.php" type="button" class="btn btn-star">REGRISTRARME</a></h3>
             </div>
 		</div>
        </div>
